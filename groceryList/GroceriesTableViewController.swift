@@ -33,7 +33,7 @@ class GroceriesTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        createEntries()
+        //createEntries()
         populateItemsFromCoreData()
     }
     
