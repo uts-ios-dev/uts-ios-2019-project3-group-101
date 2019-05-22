@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="59S-XE-8k0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NvO-XB-pzb">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,38 +10,38 @@
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
-        <scene sceneID="X8w-cu-oic">
+        <scene sceneID="RYb-XD-V8W">
             <objects>
-                <navigationController id="59S-XE-8k0" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6wx-jE-p3T">
+                <navigationController id="NvO-XB-pzb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dTC-Gy-h2z">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="H9a-2R-dOv" kind="relationship" relationship="rootViewController" id="MVG-38-qAA"/>
+                        <segue destination="umk-RR-bnt" kind="relationship" relationship="rootViewController" id="1XH-AV-okq"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wPw-KP-H7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Re-jp-h8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="333" y="753"/>
         </scene>
         <!--Grocery List-->
-        <scene sceneID="TIa-Is-3zB">
+        <scene sceneID="CgU-Om-sip">
             <objects>
-                <tableViewController id="H9a-2R-dOv" customClass="GroceriesTableViewController" customModule="groceryList" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FTR-5b-YXC">
+                <tableViewController id="umk-RR-bnt" customClass="GroceriesTableViewController" customModule="groceryList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xbV-Nt-Z03">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groceryItemCell" textLabel="g8O-Wo-JjK" style="IBUITableViewCellStyleDefault" id="KjQ-F8-TpI" customClass="ItemTableViewCell" customModule="groceryList" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groceryItemCell" textLabel="z2h-Kr-h96" style="IBUITableViewCellStyleDefault" id="w0M-Eo-gHZ">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KjQ-F8-TpI" id="0Qh-ZB-kOB">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w0M-Eo-gHZ" id="eZL-Hs-cTg">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g8O-Wo-JjK">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z2h-Kr-h96">
                                             <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -54,24 +54,17 @@
                         </prototypes>
                         <sections/>
                         <connections>
-                            <outlet property="dataSource" destination="H9a-2R-dOv" id="RHX-9i-wjg"/>
-                            <outlet property="delegate" destination="H9a-2R-dOv" id="kBZ-Nd-Le9"/>
+                            <outlet property="dataSource" destination="umk-RR-bnt" id="8bm-qW-vFU"/>
+                            <outlet property="delegate" destination="umk-RR-bnt" id="0ea-wn-ifk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Grocery List" leftItemsSupplementBackButton="YES" id="b8Y-Na-M6o">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="zeV-Nw-fhv"/>
-                        <barButtonItem key="rightBarButtonItem" title="+" id="cOK-Cl-Vjo">
-                            <connections>
-                                <action selector="handleAdd:" destination="H9a-2R-dOv" id="QXF-ej-im2"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Grocery List" leftItemsSupplementBackButton="YES" id="K7b-p4-C1Z">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="VfK-ab-DXB"/>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="qRs-uo-fxn"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <connections>
-                        <outlet property="groceryTV" destination="FTR-5b-YXC" id="00q-yf-jQG"/>
-                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EER-32-wHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flH-ob-I2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1108.6956521739132" y="752.67857142857144"/>
         </scene>
