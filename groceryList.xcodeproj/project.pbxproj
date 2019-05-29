@@ -26,7 +26,6 @@
 		40E627E2229525D800088276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40E627E82295261100088276 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		40E627EA2295267300088276 /* GroceriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesTableViewController.swift; sourceTree = "<group>"; };
-		A1F50818229E5086005E70F5 /* GroceryList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GroceryList.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,18 +58,14 @@
 		40E627D2229525D500088276 /* GroceryList */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-				A1F50818229E5086005E70F5 /* GroceryList.entitlements */,
-=======
->>>>>>> parent of a3e2aec... updated plus button
+				40E627EA2295267300088276 /* GroceriesTableViewController.swift */,
 				40E627D3229525D500088276 /* AppDelegate.swift */,
+				40E627E82295261100088276 /* Item.swift */,
 				40E627D7229525D500088276 /* Main.storyboard */,
-				40E627DD229525D800088276 /* Assets.xcassets */,
 				40E627DF229525D800088276 /* LaunchScreen.storyboard */,
+				40E627DD229525D800088276 /* Assets.xcassets */,
 				40E627E2229525D800088276 /* Info.plist */,
 				40E627DA229525D500088276 /* GroceryList.xcdatamodeld */,
-				40E627E82295261100088276 /* Item.swift */,
-				40E627EA2295267300088276 /* GroceriesTableViewController.swift */,
 			);
 			path = GroceryList;
 			sourceTree = "<group>";
@@ -107,15 +102,10 @@
 				TargetAttributes = {
 					40E627CF229525D500088276 = {
 						CreatedOnToolsVersion = 10.2;
-						SystemCapabilities = {
-							com.apple.Siri = {
-								enabled = 1;
-							};
-						};
 					};
 				};
 			};
-			buildConfigurationList = 40E627CB229525D500088276 /* Build configuration list for PBXProject "GroceryList" */;
+			buildConfigurationList = 40E627CB229525D500088276 /* Build configuration list for PBXProject "groceryList" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -300,15 +290,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = GroceryList/GroceryList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RUKSJGCW4H;
+				DEVELOPMENT_TEAM = ZZL7JQXNW2;
 				INFOPLIST_FILE = GroceryList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = UTS.GroceryList;
+				PRODUCT_BUNDLE_IDENTIFIER = UTS.GroceryListApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,15 +308,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = GroceryList/GroceryList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RUKSJGCW4H;
+				DEVELOPMENT_TEAM = ZZL7JQXNW2;
 				INFOPLIST_FILE = GroceryList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = UTS.GroceryList;
+				PRODUCT_BUNDLE_IDENTIFIER = UTS.GroceryListApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -337,7 +325,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		40E627CB229525D500088276 /* Build configuration list for PBXProject "GroceryList" */ = {
+		40E627CB229525D500088276 /* Build configuration list for PBXProject "groceryList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40E627E3229525D800088276 /* Debug */,

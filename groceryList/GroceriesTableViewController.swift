@@ -39,7 +39,10 @@ class GroceriesTableViewController: UITableViewController {
     
     @IBAction func handleAdd(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        //testing 1 2 3
+        appDelegate.saveItem(item: "banana")
+        groceryTV.beginUpdates()
+        groceryTV.insertRows(at: [NSIndexPath(row: appDelegate.getItems().count-1, section: 0) as IndexPath], with: UITableView.RowAnimation.automatic)
+        groceryTV.endUpdates()
     }
     
     // MARK: - Table view data source
