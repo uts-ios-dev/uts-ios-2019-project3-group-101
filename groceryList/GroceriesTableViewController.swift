@@ -18,32 +18,18 @@ extension ItemEntity {
 
 class GroceriesTableViewController: UITableViewController {
     
-    @IBOutlet var groceryTV: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+
         
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        createEntries()
         populateItemsFromCoreData()
     }
-    
-    @IBAction func handleAdd(_ sender: Any) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.saveItem(item: "banana")
-        groceryTV.beginUpdates()
-        groceryTV.insertRows(at: [NSIndexPath(row: appDelegate.getItems().count-1, section: 0) as IndexPath], with: UITableView.RowAnimation.automatic)
-        groceryTV.endUpdates()
-    }
+
     
     // MARK: - Table view data source
     var myItemsFromCoreData: [Item] = [Item]()
@@ -71,7 +57,7 @@ class GroceriesTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "groceryItemCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "groceryCell", for: indexPath)
         
         // Configure the cell...
         cell.textLabel?.text = myItemsFromCoreData[indexPath.row].item

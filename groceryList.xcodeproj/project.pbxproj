@@ -14,6 +14,7 @@
 		40E627E1229525D800088276 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E627DF229525D800088276 /* LaunchScreen.storyboard */; };
 		40E627E92295261100088276 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E627E82295261100088276 /* Item.swift */; };
 		40E627EB2295267300088276 /* GroceriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E627EA2295267300088276 /* GroceriesTableViewController.swift */; };
+		CC97B2F822A33D4600602F65 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC97B2F722A33D4600602F65 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		40E627E2229525D800088276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40E627E82295261100088276 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		40E627EA2295267300088276 /* GroceriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesTableViewController.swift; sourceTree = "<group>"; };
+		CC97B2F622A32E5800602F65 /* GroceryList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GroceryList.entitlements; sourceTree = "<group>"; };
+		CC97B2F722A33D4600602F65 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +61,9 @@
 		40E627D2229525D500088276 /* GroceryList */ = {
 			isa = PBXGroup;
 			children = (
+				CC97B2F622A32E5800602F65 /* GroceryList.entitlements */,
 				40E627EA2295267300088276 /* GroceriesTableViewController.swift */,
+				CC97B2F722A33D4600602F65 /* AddViewController.swift */,
 				40E627D3229525D500088276 /* AppDelegate.swift */,
 				40E627E82295261100088276 /* Item.swift */,
 				40E627D7229525D500088276 /* Main.storyboard */,
@@ -102,6 +107,11 @@
 				TargetAttributes = {
 					40E627CF229525D500088276 = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -141,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC97B2F822A33D4600602F65 /* AddViewController.swift in Sources */,
 				40E627E92295261100088276 /* Item.swift in Sources */,
 				40E627DC229525D500088276 /* GroceryList.xcdatamodeld in Sources */,
 				40E627D4229525D500088276 /* AppDelegate.swift in Sources */,
@@ -290,14 +301,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GroceryList/GroceryList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZZL7JQXNW2;
+				DEVELOPMENT_TEAM = B9W399TV4M;
 				INFOPLIST_FILE = GroceryList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = UTS.GroceryListApp;
+				PRODUCT_BUNDLE_IDENTIFIER = UTS.GroceryListApp11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -308,14 +320,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GroceryList/GroceryList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZZL7JQXNW2;
+				DEVELOPMENT_TEAM = B9W399TV4M;
 				INFOPLIST_FILE = GroceryList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = UTS.GroceryListApp;
+				PRODUCT_BUNDLE_IDENTIFIER = UTS.GroceryListApp11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
