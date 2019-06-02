@@ -91,6 +91,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data Saving support
 
+    var managedContext: NSManagedObjectContext? {
+        let container = persistentContainer
+        return container.viewContext
+    }
+        
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -104,6 +109,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
 
 }
 

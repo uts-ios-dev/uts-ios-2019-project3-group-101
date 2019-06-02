@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import CoreData
 
 class AddViewController: UIViewController {
 
+    // MARK: Properties
+    
+    var managedContext : NSManagedObjectContext!
+    
     // MARK: Outlets
 
     @IBOutlet var itemTv: UITextView!
     @IBOutlet var doneBtn: UIButton!
     @IBOutlet weak var bottomContraint: NSLayoutConstraint!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +30,7 @@ class AddViewController: UIViewController {
             selector: #selector(keyboardWillShow(with:)),
             name: UIResponder.keyboardWillShowNotification,
             object: nil)
-        itemTv.becomeFirstResponder()
+//        itemTv.becomeFirstResponder()
     }
     
     // MARK: Actions
@@ -42,12 +48,21 @@ class AddViewController: UIViewController {
         }
     }
     
-    @IBAction func handleCancel(_ sender: Any) {
-        dismiss(animated: true)
+    fileprivate func dismissAndResign() {
         itemTv.resignFirstResponder()
+        dismiss(animated: true)
+    }
+    
+    @IBAction func handleCancel(_ sender: Any) {
+        dismissAndResign()
     }
     
     @IBAction func handleAdd(_ sender: Any) {
+        
+        guard let groceryItem = itemTv.text else { return }
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.saveItem(item: groceryItem)
+        dismissAndResign()
     }
     /*
     // MARK: - Navigation
@@ -62,7 +77,7 @@ class AddViewController: UIViewController {
 }
 
 extension AddViewController: UITextViewDelegate {
-    func textViewDidChangeSelection(_ textView: UITextView) {
+    func textViewDidBeginEditing(_ textView: UITextView) {
         if doneBtn.isHidden {
             itemTv.text.removeAll()
             itemTv.textColor = .white
@@ -74,4 +89,16 @@ extension AddViewController: UITextViewDelegate {
             }
         }
     }
+//    func textViewDidChangeSelection(_ textView: UITextView) {
+//        if doneBtn.isHidden {
+//            itemTv.text.removeAll()
+//            itemTv.textColor = .white
+//
+//            doneBtn.isHidden = false
+//
+//            UIView.animate(withDuration: 0.2) {
+//                self.view.layoutIfNeeded()
+//            }
+//        }
+//    }
 }
