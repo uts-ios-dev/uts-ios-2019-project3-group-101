@@ -102,34 +102,24 @@ class GroceriesTableViewController: UITableViewController {
         
         // Configure the cell...
         //cell.textLabel?.text = myItemsFromCoreData[indexPath.row].item
-        let groceryItem = resultsController.object(at: indexPath)
-        cell.textLabel?.text = groceryItem.item
+        configureCell(cell, at: indexPath)
         return cell
     }
     
-    
-    //    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-    //        if editingStyle == .delete{
-    //            myItemsFromCoreData.remove(at: indexPath.row)
-    //            tableView.deleteRows(at: [indexPath], with: .bottom)
-    //        }
-    //    }
-    
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true;
+    func configureCell(_ cell: UITableViewCell, at indexPath: IndexPath) {
+        let groceryItem = resultsController.object(at: indexPath)
+        cell.textLabel?.text = groceryItem.item
     }
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCell.EditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if (editingStyle == .delete) {
-            // Fetch record
-            let record = resultsController.object(at: indexPath as IndexPath) as NSManagedObject
-            
-            // Delete record
-            //NSManagedObjectContext.delete(record)
-        }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else {return}
+        
+        // Fetch record
+        let record = resultsController.object(at: indexPath)
+        
+        // Delete record
+        resultsController.managedObjectContext.delete(record)
     }
-    
-    
 }
 
 extension GroceriesTableViewController: NSFetchedResultsControllerDelegate {
@@ -146,6 +136,18 @@ extension GroceriesTableViewController: NSFetchedResultsControllerDelegate {
         case .insert:
             if let indexPath = newIndexPath {
                 tableView.insertRows(at: [indexPath], with: .automatic)
+            }
+        case .delete:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        case .update:
+            if let indexPath = indexPath, let cell = tableView.cellForRow(at: indexPath) {
+                configureCell(cell, at: indexPath)
+            }
+        case .move:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
             }
         default:
             break
