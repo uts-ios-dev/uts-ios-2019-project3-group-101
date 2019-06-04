@@ -114,11 +114,15 @@ class GroceriesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else {return}
         
-        // Fetch record
-        let record = resultsController.object(at: indexPath)
+        // Fetch grocery item
+        let groceryItem = resultsController.object(at: indexPath)
         
-        // Delete record
-        resultsController.managedObjectContext.delete(record)
+        // Delete grocery item
+        resultsController.managedObjectContext.delete(groceryItem)
+        
+        // Save context
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.saveContext()
     }
 }
 
