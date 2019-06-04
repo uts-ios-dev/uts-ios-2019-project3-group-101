@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>AddItemExtension</string>
+	<string>AddItems</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -26,11 +26,10 @@
 		<dict>
 			<key>IntentsRestrictedWhileLocked</key>
 			<array/>
-			<key>IntentsRestrictedWhileProtectedDataUnavailable</key>
-			<array/>
 			<key>IntentsSupported</key>
 			<array>
-				<string>AddItem</string>
+				<string>INAddTasksIntent</string>
+				<string>INSetTaskAttributeIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>

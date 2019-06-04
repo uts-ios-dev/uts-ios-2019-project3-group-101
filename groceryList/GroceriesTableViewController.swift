@@ -21,6 +21,7 @@ extension ItemEntity {
 class GroceriesTableViewController: UITableViewController {
     
     var resultsController: NSFetchedResultsController<ItemEntity>!
+    static let sharedInstance = GroceriesTableViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,6 +130,13 @@ class GroceriesTableViewController: UITableViewController {
         // Save context
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.saveContext()
+    }
+    
+    func addItems(items : [String]) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        for item in items {
+            appDelegate.saveItem(item: item)
+        }
     }
 }
 

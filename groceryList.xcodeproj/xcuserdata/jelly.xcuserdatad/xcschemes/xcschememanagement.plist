@@ -4,15 +4,37 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AddItemExtension.xcscheme_^#shared#^_</key>
+		<key>AddItems.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>GroceryList.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>40E627CF229525D500088276</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A1F5082F22A6A7B6005E70F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A1F5084E22A6F10D005E70F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
