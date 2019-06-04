@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Intents
 
 extension ItemEntity {
     
@@ -25,6 +26,11 @@ class GroceriesTableViewController: UITableViewController {
         super.viewDidLoad()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
 //        let items = appDelegate.getItems()
+        
+        INPreferences.requestSiriAuthorization { (status) in
+            
+        }
+        
         //Request
         let request : NSFetchRequest<ItemEntity> = ItemEntity.fetchRequest()
         let sortDecriptors = NSSortDescriptor(key: "item", ascending: true)

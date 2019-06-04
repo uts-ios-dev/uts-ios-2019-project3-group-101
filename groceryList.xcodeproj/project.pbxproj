@@ -14,8 +14,34 @@
 		40E627E1229525D800088276 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E627DF229525D800088276 /* LaunchScreen.storyboard */; };
 		40E627E92295261100088276 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E627E82295261100088276 /* Item.swift */; };
 		40E627EB2295267300088276 /* GroceriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E627EA2295267300088276 /* GroceriesTableViewController.swift */; };
+		A1F5083322A6A7B6005E70F5 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F5083222A6A7B6005E70F5 /* IntentHandler.swift */; };
+		A1F5083722A6A7B6005E70F5 /* AddItemExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A1F5083022A6A7B6005E70F5 /* AddItemExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CC97B2F822A33D4600602F65 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC97B2F722A33D4600602F65 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1F5083522A6A7B6005E70F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40E627C8229525D500088276 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1F5082F22A6A7B6005E70F5;
+			remoteInfo = AddItemExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A1F5083B22A6A7B6005E70F5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A1F5083722A6A7B6005E70F5 /* AddItemExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		40E627D0229525D500088276 /* GroceryList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,12 +53,22 @@
 		40E627E2229525D800088276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40E627E82295261100088276 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		40E627EA2295267300088276 /* GroceriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesTableViewController.swift; sourceTree = "<group>"; };
+		A1F5083022A6A7B6005E70F5 /* AddItemExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AddItemExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1F5083222A6A7B6005E70F5 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		A1F5083422A6A7B6005E70F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC97B2F622A32E5800602F65 /* GroceryList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GroceryList.entitlements; sourceTree = "<group>"; };
 		CC97B2F722A33D4600602F65 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		40E627CD229525D500088276 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1F5082D22A6A7B6005E70F5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				40E627D2229525D500088276 /* GroceryList */,
+				A1F5083122A6A7B6005E70F5 /* AddItemExtension */,
 				40E627D1229525D500088276 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				40E627D0229525D500088276 /* GroceryList.app */,
+				A1F5083022A6A7B6005E70F5 /* AddItemExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +113,15 @@
 			path = GroceryList;
 			sourceTree = "<group>";
 		};
+		A1F5083122A6A7B6005E70F5 /* AddItemExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A1F5083222A6A7B6005E70F5 /* IntentHandler.swift */,
+				A1F5083422A6A7B6005E70F5 /* Info.plist */,
+			);
+			path = AddItemExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,15 +132,34 @@
 				40E627CC229525D500088276 /* Sources */,
 				40E627CD229525D500088276 /* Frameworks */,
 				40E627CE229525D500088276 /* Resources */,
+				A1F5083B22A6A7B6005E70F5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A1F5083622A6A7B6005E70F5 /* PBXTargetDependency */,
 			);
 			name = GroceryList;
 			productName = GroceryList;
 			productReference = 40E627D0229525D500088276 /* GroceryList.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A1F5082F22A6A7B6005E70F5 /* AddItemExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1F5083A22A6A7B6005E70F5 /* Build configuration list for PBXNativeTarget "AddItemExtension" */;
+			buildPhases = (
+				A1F5082C22A6A7B6005E70F5 /* Sources */,
+				A1F5082D22A6A7B6005E70F5 /* Frameworks */,
+				A1F5082E22A6A7B6005E70F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AddItemExtension;
+			productName = AddItemExtension;
+			productReference = A1F5083022A6A7B6005E70F5 /* AddItemExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -113,6 +179,9 @@
 							};
 						};
 					};
+					A1F5082F22A6A7B6005E70F5 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 				};
 			};
 			buildConfigurationList = 40E627CB229525D500088276 /* Build configuration list for PBXProject "groceryList" */;
@@ -129,6 +198,7 @@
 			projectRoot = "";
 			targets = (
 				40E627CF229525D500088276 /* GroceryList */,
+				A1F5082F22A6A7B6005E70F5 /* AddItemExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -141,6 +211,13 @@
 				40E627E1229525D800088276 /* LaunchScreen.storyboard in Resources */,
 				40E627DE229525D800088276 /* Assets.xcassets in Resources */,
 				40E627D9229525D500088276 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1F5082E22A6A7B6005E70F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +236,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1F5082C22A6A7B6005E70F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1F5083322A6A7B6005E70F5 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1F5083622A6A7B6005E70F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1F5082F22A6A7B6005E70F5 /* AddItemExtension */;
+			targetProxy = A1F5083522A6A7B6005E70F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		40E627D7229525D500088276 /* Main.storyboard */ = {
@@ -300,6 +393,7 @@
 		40E627E6229525D800088276 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GroceryList/GroceryList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +413,7 @@
 		40E627E7229525D800088276 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GroceryList/GroceryList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -330,6 +425,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = UTS.GroceryListApp11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A1F5083822A6A7B6005E70F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B9W399TV4M;
+				INFOPLIST_FILE = AddItemExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = UTS.GroceryListApp11.AddItemExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1F5083922A6A7B6005E70F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B9W399TV4M;
+				INFOPLIST_FILE = AddItemExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = UTS.GroceryListApp11.AddItemExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -352,6 +485,15 @@
 			buildConfigurations = (
 				40E627E6229525D800088276 /* Debug */,
 				40E627E7229525D800088276 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1F5083A22A6A7B6005E70F5 /* Build configuration list for PBXNativeTarget "AddItemExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1F5083822A6A7B6005E70F5 /* Debug */,
+				A1F5083922A6A7B6005E70F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
