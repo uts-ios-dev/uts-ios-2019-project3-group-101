@@ -1,0 +1,503 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC4BBF1E22A7C45C00E71987 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4BBF1D22A7C45C00E71987 /* AppDelegate.swift */; };
+		CC4BBF2022A7C45C00E71987 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4BBF1F22A7C45C00E71987 /* ViewController.swift */; };
+		CC4BBF2322A7C45C00E71987 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC4BBF2122A7C45C00E71987 /* Main.storyboard */; };
+		CC4BBF2522A7C45D00E71987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC4BBF2422A7C45D00E71987 /* Assets.xcassets */; };
+		CC4BBF2822A7C45D00E71987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC4BBF2622A7C45D00E71987 /* LaunchScreen.storyboard */; };
+		CC4BBF3722A7D17800E71987 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4BBF3622A7D17800E71987 /* IntentHandler.swift */; };
+		CC4BBF3B22A7D17800E71987 /* SiriAdd.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CC4BBF3422A7D17800E71987 /* SiriAdd.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CC4BBF4122A7DB7C00E71987 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4BBF1F22A7C45C00E71987 /* ViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC4BBF3922A7D17800E71987 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC4BBF1222A7C45C00E71987 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC4BBF3322A7D17800E71987;
+			remoteInfo = SiriAdd;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CC4BBF3F22A7D17800E71987 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CC4BBF3B22A7D17800E71987 /* SiriAdd.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CC4BBF1A22A7C45C00E71987 /* GroceryNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC4BBF1D22A7C45C00E71987 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC4BBF1F22A7C45C00E71987 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC4BBF2222A7C45C00E71987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC4BBF2422A7C45D00E71987 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC4BBF2722A7C45D00E71987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC4BBF2922A7C45D00E71987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC4BBF2F22A7CEB700E71987 /* GroceryNow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GroceryNow.entitlements; sourceTree = "<group>"; };
+		CC4BBF3422A7D17800E71987 /* SiriAdd.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SiriAdd.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC4BBF3622A7D17800E71987 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		CC4BBF3822A7D17800E71987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC4BBF4022A7D20800E71987 /* SiriAdd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiriAdd.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC4BBF1722A7C45C00E71987 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC4BBF3122A7D17800E71987 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC4BBF1122A7C45C00E71987 = {
+			isa = PBXGroup;
+			children = (
+				CC4BBF1C22A7C45C00E71987 /* GroceryNow */,
+				CC4BBF3522A7D17800E71987 /* SiriAdd */,
+				CC4BBF1B22A7C45C00E71987 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC4BBF1B22A7C45C00E71987 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC4BBF1A22A7C45C00E71987 /* GroceryNow.app */,
+				CC4BBF3422A7D17800E71987 /* SiriAdd.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC4BBF1C22A7C45C00E71987 /* GroceryNow */ = {
+			isa = PBXGroup;
+			children = (
+				CC4BBF2F22A7CEB700E71987 /* GroceryNow.entitlements */,
+				CC4BBF1D22A7C45C00E71987 /* AppDelegate.swift */,
+				CC4BBF1F22A7C45C00E71987 /* ViewController.swift */,
+				CC4BBF2122A7C45C00E71987 /* Main.storyboard */,
+				CC4BBF2422A7C45D00E71987 /* Assets.xcassets */,
+				CC4BBF2622A7C45D00E71987 /* LaunchScreen.storyboard */,
+				CC4BBF2922A7C45D00E71987 /* Info.plist */,
+			);
+			path = GroceryNow;
+			sourceTree = "<group>";
+		};
+		CC4BBF3522A7D17800E71987 /* SiriAdd */ = {
+			isa = PBXGroup;
+			children = (
+				CC4BBF4022A7D20800E71987 /* SiriAdd.entitlements */,
+				CC4BBF3622A7D17800E71987 /* IntentHandler.swift */,
+				CC4BBF3822A7D17800E71987 /* Info.plist */,
+			);
+			path = SiriAdd;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC4BBF1922A7C45C00E71987 /* GroceryNow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC4BBF2C22A7C45D00E71987 /* Build configuration list for PBXNativeTarget "GroceryNow" */;
+			buildPhases = (
+				CC4BBF1622A7C45C00E71987 /* Sources */,
+				CC4BBF1722A7C45C00E71987 /* Frameworks */,
+				CC4BBF1822A7C45C00E71987 /* Resources */,
+				CC4BBF3F22A7D17800E71987 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC4BBF3A22A7D17800E71987 /* PBXTargetDependency */,
+			);
+			name = GroceryNow;
+			productName = GroceryNow;
+			productReference = CC4BBF1A22A7C45C00E71987 /* GroceryNow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC4BBF3322A7D17800E71987 /* SiriAdd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC4BBF3C22A7D17800E71987 /* Build configuration list for PBXNativeTarget "SiriAdd" */;
+			buildPhases = (
+				CC4BBF3022A7D17800E71987 /* Sources */,
+				CC4BBF3122A7D17800E71987 /* Frameworks */,
+				CC4BBF3222A7D17800E71987 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SiriAdd;
+			productName = SiriAdd;
+			productReference = CC4BBF3422A7D17800E71987 /* SiriAdd.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC4BBF1222A7C45C00E71987 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Divraj Singh";
+				TargetAttributes = {
+					CC4BBF1922A7C45C00E71987 = {
+						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					CC4BBF3322A7D17800E71987 = {
+						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = CC4BBF1522A7C45C00E71987 /* Build configuration list for PBXProject "GroceryNow" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC4BBF1122A7C45C00E71987;
+			productRefGroup = CC4BBF1B22A7C45C00E71987 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC4BBF1922A7C45C00E71987 /* GroceryNow */,
+				CC4BBF3322A7D17800E71987 /* SiriAdd */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC4BBF1822A7C45C00E71987 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC4BBF2822A7C45D00E71987 /* LaunchScreen.storyboard in Resources */,
+				CC4BBF2522A7C45D00E71987 /* Assets.xcassets in Resources */,
+				CC4BBF2322A7C45C00E71987 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC4BBF3222A7D17800E71987 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC4BBF1622A7C45C00E71987 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC4BBF2022A7C45C00E71987 /* ViewController.swift in Sources */,
+				CC4BBF1E22A7C45C00E71987 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC4BBF3022A7D17800E71987 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC4BBF4122A7DB7C00E71987 /* ViewController.swift in Sources */,
+				CC4BBF3722A7D17800E71987 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC4BBF3A22A7D17800E71987 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC4BBF3322A7D17800E71987 /* SiriAdd */;
+			targetProxy = CC4BBF3922A7D17800E71987 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC4BBF2122A7C45C00E71987 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC4BBF2222A7C45C00E71987 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC4BBF2622A7C45D00E71987 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC4BBF2722A7C45D00E71987 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC4BBF2A22A7C45D00E71987 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC4BBF2B22A7C45D00E71987 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC4BBF2D22A7C45D00E71987 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GroceryNow/GroceryNow.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B9W399TV4M;
+				INFOPLIST_FILE = GroceryNow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GroceryNow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC4BBF2E22A7C45D00E71987 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GroceryNow/GroceryNow.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B9W399TV4M;
+				INFOPLIST_FILE = GroceryNow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GroceryNow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CC4BBF3D22A7D17800E71987 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SiriAdd/SiriAdd.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B9W399TV4M;
+				INFOPLIST_FILE = SiriAdd/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GroceryNow.SiriAdd;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC4BBF3E22A7D17800E71987 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SiriAdd/SiriAdd.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B9W399TV4M;
+				INFOPLIST_FILE = SiriAdd/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GroceryNow.SiriAdd;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC4BBF1522A7C45C00E71987 /* Build configuration list for PBXProject "GroceryNow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC4BBF2A22A7C45D00E71987 /* Debug */,
+				CC4BBF2B22A7C45D00E71987 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC4BBF2C22A7C45D00E71987 /* Build configuration list for PBXNativeTarget "GroceryNow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC4BBF2D22A7C45D00E71987 /* Debug */,
+				CC4BBF2E22A7C45D00E71987 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC4BBF3C22A7D17800E71987 /* Build configuration list for PBXNativeTarget "SiriAdd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC4BBF3D22A7D17800E71987 /* Debug */,
+				CC4BBF3E22A7D17800E71987 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC4BBF1222A7C45C00E71987 /* Project object */;
+}
