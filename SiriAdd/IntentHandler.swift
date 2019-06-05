@@ -44,10 +44,7 @@ extension IntentHandler: INAddTasksIntentHandling {
                 taskTitle -> String in
                 return taskTitle.spokenPhrase
             }
-//            tasks = createTasks(fromTitles: taskTitlesStrings)
             currentGroceryList += taskTitlesStrings
-//            ViewController.sharedInstance.reloadTableView()
-//            ViewController.sharedInstance.add(groceries: taskTitlesStrings)
             UserDefaults(suiteName: "group.shared.demo2")?.set(currentGroceryList, forKey: "savedData")
         }
         
