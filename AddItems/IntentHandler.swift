@@ -8,6 +8,8 @@
 
 import Intents
 
+let sharedUserDefaults = UserDefaults(suiteName: "group.com.UTS.GroceryList.Shared")
+
 class IntentHandler: INExtension {
     
     override func handler(for intent: INIntent) -> Any {
@@ -39,20 +41,26 @@ extension IntentHandler : INAddTasksIntentHandling {
     public func handle(intent: INAddTasksIntent, completion: @escaping (INAddTasksIntentResponse) -> Void) {
        
 //        let taskList = intent.targetTaskList
+        guard var currentGroceryList = sharedUserDefaults?.stringArray(forKey: "groceryList") else { return }
         
-        var tasks : [INTask] = []
+        //apend current grocery list with the task titles string array
+        //update user defaults with new array
+        
+//        var tasks : [INTask] = []
         if let taskTitles = intent.taskTitles {
             let taskTitlesStrings = taskTitles.map {
                 taskTitle -> String in
                 return taskTitle.spokenPhrase
             }
-            tasks = createTasks(fromTitles: taskTitlesStrings)
-            AddingHelper.sharedInstance.add(items: taskTitlesStrings)
+//            tasks = createTasks(fromTitles: taskTitlesStrings)
+//            AddingHelper.sharedInstance.add(items: taskTitlesStrings)
+            currentGroceryList += taskTitlesStrings
+            
+            sharedUserDefaults?.set(currentGroceryList, forKey: "groceryList")
         }
         
         let response = INAddTasksIntentResponse(code: .success, userActivity: nil)
         response.modifiedTaskList = intent.targetTaskList
-        response.addedTasks = tasks
         completion(response)
     }
 }

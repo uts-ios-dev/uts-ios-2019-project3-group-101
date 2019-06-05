@@ -18,10 +18,13 @@ extension ItemEntity {
     
 }
 
+let sharedUserDefaults = UserDefaults(suiteName: "group.com.UTS.GroceryList.Shared")
+
 class GroceriesTableViewController: UITableViewController {
     
     var resultsController: NSFetchedResultsController<ItemEntity>!
-    static let sharedInstance = GroceriesTableViewController()
+    
+    var groceryList = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +55,7 @@ class GroceriesTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        sharedUserDefaults?.set(groceryList, forKey: "groceryList")
 //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
 //        //Request
 //        let request : NSFetchRequest<ItemEntity> = ItemEntity.fetchRequest()
@@ -75,9 +79,9 @@ class GroceriesTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let _ = sender as? UIBarButtonItem, let vc = segue.destination as? AddViewController {
             vc.managedContext = resultsController.managedObjectContext
+            vc.groceryList = groceryList
         }
     }
-
     
     // MARK: - Table view data source
 //    var myItemsFromCoreData: [Item] = [Item]()
@@ -100,7 +104,7 @@ class GroceriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return resultsController.sections?[section].objects?.count ?? 0
+        return groceryList.count
     }
     
     
@@ -130,13 +134,6 @@ class GroceriesTableViewController: UITableViewController {
         // Save context
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.saveContext()
-    }
-    
-    func addItems(items : [String]) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        for item in items {
-            appDelegate.saveItem(item: item)
-        }
     }
 }
 

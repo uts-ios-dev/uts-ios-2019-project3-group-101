@@ -14,6 +14,7 @@ class AddViewController: UIViewController {
     // MARK: Properties
     
     var managedContext : NSManagedObjectContext!
+    var groceryList = [String]()
     
     // MARK: Outlets
 
@@ -62,6 +63,8 @@ class AddViewController: UIViewController {
         guard let groceryItem = itemTv.text else { return }
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.saveItem(item: groceryItem)
+        groceryList.append(groceryItem)
+        sharedUserDefaults?.set(groceryList, forKey: "groceryList")
         dismissAndResign()
     }
     /*
