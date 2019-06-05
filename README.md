@@ -12,3 +12,4 @@ Known bugs:
 - Currently, after invoking Siri to add a grocery item, the TableView does not automatically refresh itself 
 to show the new item. The app needs to be cleared from recents and relaunched for the TableView to be updated
 - Siri functionality does not work on a simulator 
++ Minor bugs detailed in issues section of this repository 
