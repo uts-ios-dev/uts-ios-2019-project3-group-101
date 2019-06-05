@@ -8,7 +8,7 @@
 
 import UIKit
 
-var items = [String]()
+var items = [String]() //the array of grocery items
 
 class ViewController: UIViewController {
 
@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getData()
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,29 +33,31 @@ class ViewController: UIViewController {
     }
 
     @IBAction func handleAdd(_ sender: Any) {
+        // set up an alert
         let alert = UIAlertController(title: "Add Grocery", message: nil, preferredStyle: .alert)
         alert.addTextField { (itemTf) in
             itemTf.placeholder = "Enter Grocery Item"
         }
+        // set up alert button action
         let action = UIAlertAction(title: "Add", style: .default) { (_) in
             guard let item = alert.textFields?.first?.text else { return }
+            //create array of items that can be passed to add function
             var itemStrings = [String]()
             itemStrings.append(item)
             self.add(groceries: itemStrings)
         }
+        // show alert
         alert.addAction(action)
         present(alert, animated: true)
     }
     
     func add(groceries: [String]) {
+        //update array
         items.append(contentsOf: groceries)
+        //update TableView
         let indexPath = IndexPath(row: items.count - 1, section: 0)
         self.groceriesTableView.insertRows(at: [indexPath], with: .fade)
         self.storeData()
-    }
-    
-    func reloadTableView() {
-        self.groceriesTableView.reloadData()
     }
 }
 
