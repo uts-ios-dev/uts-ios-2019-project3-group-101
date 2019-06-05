@@ -36,7 +36,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Groceries" id="w5j-3T-pft">
-                        <barButtonItem key="rightBarButtonItem" title="+" systemItem="add" id="TYJ-I2-3SQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TYJ-I2-3SQ">
                             <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="handleAdd:" destination="BYZ-38-t0r" id="zRL-jA-4Gf"/>
