@@ -3,7 +3,7 @@ GroceryNow:
 
 Installation instructions: 
 - Clone this project to Github Desktop
-- Run the app on a iPhone 
+- Run the app on an iPhone 
 
 Activate Siri by saying: 
 - "Add [item] to my grocery list on GroceryNow"
